@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>posiciónhorizontal</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #111;
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.6;
+}
+section {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+h1, h2 {
+  font-weight: normal;
+}
+button {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+footer {
+  font-size: 0.9rem;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h1>Ya estás tumbado.<br>Ahora empieza lo peor.</h1>
+<button>Seguir despierto</button>
+</section>
+
+<section>
+<h2>Estados horizontales</h2>
+
+<p><strong>El que no se duerme</strong><br>
+Cierras los ojos. Abres la cabeza. Repasas conversaciones que nadie recuerda.</p>
+
+<p><strong>El fulminado</strong><br>
+No recuerdas cómo llegaste a la cama. Eso también es descanso.</p>
+
+<p><strong>El productivo nocturno</strong><br>
+Resuelves problemas a las tres de la mañana. No los recordarás.</p>
+
+</section>
+
+<section>
+<h2>Anécdotas</h2>
+
+<p>Me acosté a las once.<br>
+A las dos estaba buscando pisos en ciudades donde no vivo.<br>
+A las seis sonó el despertador.</p>
+
+<p>Apagué la luz para dormir.<br>
+Encendí el móvil para pensar.</p>
+
+</section>
+
+<section>
+<h2>Pensamientos</h2>
+
+<p>Mañana empiezo todo.</p>
+<p>Esto no se lo diría a nadie despierto.</p>
+<p>Solo un minuto más.</p>
+
+</section>
+
+<section>
+<h2>El móvil en la cama</h2>
+
+<p>Tiempo previsto: cinco minutos.<br>
+Tiempo real: indefinido.</p>
+
+</section>
+
+<section>
+<h2>Archivo</h2>
+
+<p>La cama no es descanso. Es un escenario.<br>
+Aquí se ensayan conversaciones, se repiten errores y se toman decisiones que nunca se ejecutan.</p>
+
+</section>
+
+<footer>
+posiciónhorizontal.com
+</footer>
+
+</body>
+</html>
