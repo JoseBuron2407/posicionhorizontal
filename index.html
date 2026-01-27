@@ -5,29 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>posición horizontal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #f4f5f7;
-  --text: #222;
+  --bg: #f2f4f7;
+  --text: #1f2933;
   --card: #ffffff;
-  --accent: #2c4a63;
+  --accent: #4f6d8c;
 }
 
 body.night {
-  --bg: #0f1418;
-  --text: #e6e6e6;
-  --card: #1b2228;
-  --accent: #8fb3d9;
+  --bg: #0b0f14;
+  --text: #e5e7eb;
+  --card: #151b23;
+  --accent: #9bb7d4;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.75;
   transition: background 0.4s, color 0.4s;
 }
 
@@ -35,7 +35,7 @@ header {
   min-height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80")
+    url("https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80")
     center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -46,9 +46,9 @@ header {
 
 header h1 {
   font-weight: 300;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   color: #fff;
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .toggle {
@@ -59,29 +59,30 @@ header h1 {
   color: var(--text);
   border: none;
   padding: 0.6rem 1rem;
-  border-radius: 20px;
+  border-radius: 24px;
+  font-size: 0.85rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  z-index: 10;
 }
 
 section {
   max-width: 900px;
-  margin: 5rem auto;
+  margin: 4.5rem auto;
   padding: 0 1.5rem;
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--accent);
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .card {
   background: var(--card);
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 18px;
   margin-bottom: 2rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
 }
 
 .image {
@@ -90,19 +91,19 @@ h2 {
 
 .image img {
   width: 100%;
-  border-radius: 18px;
+  border-radius: 22px;
 }
 
 blockquote {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.4rem;
   font-style: italic;
   opacity: 0.85;
 }
 
 footer {
   text-align: center;
-  padding: 4rem 1rem;
-  font-size: 0.9rem;
+  padding: 4rem 1.5rem;
+  font-size: 0.85rem;
   opacity: 0.7;
 }
 </style>
@@ -116,9 +117,10 @@ footer {
 
 <header>
   <h1>
-    Te tumbas.<br>
-    El cuerpo se rinde.<br>
-    La cabeza se queda despierta contigo.
+    Diseñada para leerse en el móvil,<br>
+    en la cama,<br>
+    con el pulgar cansado<br>
+    y el sueño haciendo amagos.
   </h1>
 </header>
 
@@ -126,69 +128,22 @@ footer {
   <h2>Estados horizontales</h2>
 
   <div class="card">
-    <strong>El que no se duerme</strong><br>
-    No estás nervioso.<br>
-    Estás despierto con tiempo para pensar de más.
+    <strong>El que solo iba a descansar</strong><br>
+    Te tumbas con buenas intenciones.<br>
+    La mente interpreta que es el momento ideal para repasar toda tu vida.
   </div>
 
   <div class="card">
-    <strong>El cansado lúcido</strong><br>
-    El día fue largo.<br>
-    La noche se alarga más porque ahora recuerdas todo.
+    <strong>El que mira el techo</strong><br>
+    No piensa en nada concreto.<br>
+    Precisamente ese es el problema.
   </div>
 
   <div class="card">
-    <strong>El que cae sin despedirse</strong><br>
-    No hay ritual.<br>
-    Solo un apagón limpio.
+    <strong>El que cae sin darse cuenta</strong><br>
+    Estabas leyendo esto.<br>
+    No recuerdas la última frase.
   </div>
-</section>
-
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Habitación en penumbra">
-</div>
-
-<section>
-  <h2>Anécdotas</h2>
-
-  <div class="card">
-    Me acosté porque estaba cansado.<br>
-    Me dormí porque ya no tenía fuerzas ni para pensar.
-  </div>
-
-  <div class="card">
-    Iba a mirar el móvil un momento.<br>
-    Cuando levanté la vista ya era mañana.
-  </div>
-
-  <div class="card">
-    Me desperté de madrugada con una idea brillante.<br>
-    No la apunté.<br>
-    Confío demasiado en mi yo del futuro.
-  </div>
-
-  <div class="card">
-    Dormimos en la misma cama.<br>
-    Cada uno con sus propios pensamientos.
-  </div>
-</section>
-
-<section>
-  <h2>Pensamientos que solo aparecen tumbado</h2>
-
-  <blockquote>
-    No es que mañana empiece.<br>
-    Es que ahora no puedo.
-  </blockquote>
-
-  <blockquote>
-    Esto no es tristeza.<br>
-    Es cansancio acumulado.
-  </blockquote>
-
-  <blockquote>
-    Si cierro los ojos un minuto más, quizá todo encaje.
-  </blockquote>
 </section>
 
 <div class="image">
@@ -196,11 +151,63 @@ footer {
 </div>
 
 <section>
+  <h2>Anécdotas para distraerse</h2>
+
+  <div class="card">
+    Me acosté temprano para madrugar.<br>
+    A la una estaba leyendo opiniones de hoteles en ciudades donde no pienso ir.
+  </div>
+
+  <div class="card">
+    Solo iba a mirar el móvil un momento.<br>
+    Cuando lo dejé, el cargador ya estaba más cansado que yo.
+  </div>
+
+  <div class="card">
+    Puse la tele para dormirme.<br>
+    Ahora sé más cosas, pero sigo despierto.
+  </div>
+
+  <div class="card">
+    Me dormí sujetando el móvil.<br>
+    Me desperté buscándolo debajo de la almohada.<br>
+    Estaba en mi mano.
+  </div>
+</section>
+
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80" alt="Habitación de noche">
+</div>
+
+<section>
+  <h2>Pensamientos que aparecen tumbado</h2>
+
+  <blockquote>
+    Mañana empiezo todo.<br>
+    Pero mañana bien.
+  </blockquote>
+
+  <blockquote>
+    Si no miro el móvil, pienso.<br>
+    Si pienso, no duermo.
+  </blockquote>
+
+  <blockquote>
+    Igual no tengo insomnio.<br>
+    Igual tengo demasiadas pestañas abiertas.
+  </blockquote>
+</section>
+
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Luz tenue">
+</div>
+
+<section>
   <h2>El móvil en la cama</h2>
 
   <div class="card">
-    No lo usas para distraerte.<br>
-    Lo usas para no quedarte solo con tus pensamientos.
+    No es una distracción.<br>
+    Es una negociación con el sueño.
   </div>
 </section>
 
@@ -208,14 +215,14 @@ footer {
   <h2>Archivo</h2>
 
   <div class="card">
-    La cama no es descanso.<br>
-    Es un lugar donde por fin no finges que todo va bien.
+    Esta web no quiere ayudarte a dormir.<br>
+    Quiere acompañarte mientras no lo consigues.
   </div>
 </section>
 
 <footer>
   posiciónhorizontal.com<br>
-  Para leer con la luz apagada
+  Hecha para leer tumbado, sin prisa y sin propósito
 </footer>
 
 </body>
