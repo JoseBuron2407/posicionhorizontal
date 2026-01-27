@@ -3,94 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>posiciónhorizontal</title>
+<title>posición horizontal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #111;
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f6f7f8;
+  color: #222;
+  line-height: 1.7;
+}
+
+header {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 2rem;
-  line-height: 1.6;
 }
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
 section {
-  max-width: 720px;
-  margin: 0 auto 4rem;
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
 }
-h1, h2 {
-  font-weight: normal;
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
-button {
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
+
+blockquote {
+  font-style: italic;
+  color: #555;
+}
+
+.image-block {
+  margin: 4rem 0;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 16px;
+}
+
 footer {
+  text-align: center;
+  padding: 4rem 1rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #777;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <h1>
+    Ya estás en posición horizontal.<br>
+    El cuerpo descansa.<br>
+    La cabeza no.
+  </h1>
+</header>
+
 <section>
-<h1>Ya estás tumbado.<br>Ahora empieza lo peor.</h1>
-<button>Seguir despierto</button>
+  <h2>Estados horizontales</h2>
+
+  <div class="card">
+    <strong>El que no se duerme</strong><br>
+    Cierras los ojos con disciplina.  
+    La mente responde con recuerdos inútiles y conversaciones antiguas.
+  </div>
+
+  <div class="card">
+    <strong>El que cae fulminado</strong><br>
+    No recuerdas cómo llegaste a la cama.  
+    Despertar es la única prueba de que dormiste.
+  </div>
+
+  <div class="card">
+    <strong>El creativo nocturno</strong><br>
+    A las tres de la mañana todo tiene solución.  
+    A las ocho no recuerdas ninguna.
+  </div>
+</section>
+
+<section class="image-block">
+  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80" alt="Cama de noche">
 </section>
 
 <section>
-<h2>Estados horizontales</h2>
+  <h2>Anécdotas reales</h2>
 
-<p><strong>El que no se duerme</strong><br>
-Cierras los ojos. Abres la cabeza. Repasas conversaciones que nadie recuerda.</p>
+  <div class="card">
+    Me acosté temprano para descansar.<br>
+    A la una estaba leyendo sobre vidas que no viviré.<br>
+    A las seis sonó el despertador.
+  </div>
 
-<p><strong>El fulminado</strong><br>
-No recuerdas cómo llegaste a la cama. Eso también es descanso.</p>
-
-<p><strong>El productivo nocturno</strong><br>
-Resuelves problemas a las tres de la mañana. No los recordarás.</p>
-
+  <div class="card">
+    Apagué la luz para dormir.<br>
+    Encendí el móvil para pensar mejor.
+  </div>
 </section>
 
 <section>
-<h2>Anécdotas</h2>
+  <h2>Pensamientos que solo aparecen tumbado</h2>
 
-<p>Me acosté a las once.<br>
-A las dos estaba buscando pisos en ciudades donde no vivo.<br>
-A las seis sonó el despertador.</p>
+  <blockquote>
+    Mañana empiezo todo.<br>
+    Pero mañana de verdad.
+  </blockquote>
 
-<p>Apagué la luz para dormir.<br>
-Encendí el móvil para pensar.</p>
+  <blockquote>
+    Esto no se lo diría a nadie despierto.
+  </blockquote>
 
+  <blockquote>
+    Solo un minuto más.
+  </blockquote>
+</section>
+
+<section class="image-block">
+  <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1400&q=80" alt="Luz nocturna">
 </section>
 
 <section>
-<h2>Pensamientos</h2>
+  <h2>El móvil en la cama</h2>
 
-<p>Mañana empiezo todo.</p>
-<p>Esto no se lo diría a nadie despierto.</p>
-<p>Solo un minuto más.</p>
-
+  <div class="card">
+    Tiempo previsto: cinco minutos.<br>
+    Tiempo real: indefinido.<br>
+    Consecuencia: ninguna decisión tomada.
+  </div>
 </section>
 
 <section>
-<h2>El móvil en la cama</h2>
+  <h2>Archivo clínico</h2>
 
-<p>Tiempo previsto: cinco minutos.<br>
-Tiempo real: indefinido.</p>
-
-</section>
-
-<section>
-<h2>Archivo</h2>
-
-<p>La cama no es descanso. Es un escenario.<br>
-Aquí se ensayan conversaciones, se repiten errores y se toman decisiones que nunca se ejecutan.</p>
-
+  <div class="card">
+    La cama no es descanso.  
+    Es un escenario mental donde se ensayan conversaciones,  
+    se revisan errores y se toman decisiones que nunca se ejecutan.
+  </div>
 </section>
 
 <footer>
-posiciónhorizontal.com
+  posiciónhorizontal.com<br>
+  Observatorio no oficial de la mente cansada
 </footer>
 
 </body>
