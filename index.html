@@ -8,17 +8,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --bg: #f4f5f7;
+  --text: #222;
+  --card: #ffffff;
+  --accent: #2c4a63;
+}
+
+body.night {
+  --bg: #0f1418;
+  --text: #e6e6e6;
+  --card: #1b2228;
+  --accent: #8fb3d9;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f6f7f8;
-  color: #222;
-  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  transition: background 0.4s, color 0.4s;
 }
 
 header {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,11 +45,23 @@ header {
 }
 
 header h1 {
-  font-size: 2.8rem;
-  font-weight: 400;
-  background: rgba(255,255,255,0.85);
-  padding: 2rem;
-  border-radius: 12px;
+  font-weight: 300;
+  font-size: 2.6rem;
+  color: #fff;
+  max-width: 700px;
+}
+
+.toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card);
+  color: var(--text);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 section {
@@ -42,47 +72,53 @@ section {
 
 h2 {
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
 }
 
 .card {
-  background: white;
+  background: var(--card);
   padding: 2rem;
-  border-radius: 14px;
+  border-radius: 16px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
-blockquote {
-  font-style: italic;
-  color: #555;
-}
-
-.image-block {
+.image {
   margin: 4rem 0;
 }
 
-.image-block img {
+.image img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 18px;
+}
+
+blockquote {
+  margin: 0 0 1.5rem;
+  font-style: italic;
+  opacity: 0.85;
 }
 
 footer {
   text-align: center;
   padding: 4rem 1rem;
   font-size: 0.9rem;
-  color: #777;
+  opacity: 0.7;
 }
 </style>
 </head>
 
 <body>
 
+<button class="toggle" onclick="document.body.classList.toggle('night')">
+  Modo noche
+</button>
+
 <header>
   <h1>
-    Ya estás en posición horizontal.<br>
-    El cuerpo descansa.<br>
-    La cabeza no.
+    Te tumbas.<br>
+    El cuerpo se rinde.<br>
+    La cabeza se queda despierta contigo.
   </h1>
 </header>
 
@@ -91,39 +127,49 @@ footer {
 
   <div class="card">
     <strong>El que no se duerme</strong><br>
-    Cierras los ojos con disciplina.  
-    La mente responde con recuerdos inútiles y conversaciones antiguas.
+    No estás nervioso.<br>
+    Estás despierto con tiempo para pensar de más.
   </div>
 
   <div class="card">
-    <strong>El que cae fulminado</strong><br>
-    No recuerdas cómo llegaste a la cama.  
-    Despertar es la única prueba de que dormiste.
+    <strong>El cansado lúcido</strong><br>
+    El día fue largo.<br>
+    La noche se alarga más porque ahora recuerdas todo.
   </div>
 
   <div class="card">
-    <strong>El creativo nocturno</strong><br>
-    A las tres de la mañana todo tiene solución.  
-    A las ocho no recuerdas ninguna.
+    <strong>El que cae sin despedirse</strong><br>
+    No hay ritual.<br>
+    Solo un apagón limpio.
   </div>
 </section>
 
-<section class="image-block">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80" alt="Cama de noche">
-</section>
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Habitación en penumbra">
+</div>
 
 <section>
-  <h2>Anécdotas reales</h2>
+  <h2>Anécdotas</h2>
 
   <div class="card">
-    Me acosté temprano para descansar.<br>
-    A la una estaba leyendo sobre vidas que no viviré.<br>
-    A las seis sonó el despertador.
+    Me acosté porque estaba cansado.<br>
+    Me dormí porque ya no tenía fuerzas ni para pensar.
   </div>
 
   <div class="card">
-    Apagué la luz para dormir.<br>
-    Encendí el móvil para pensar mejor.
+    Iba a mirar el móvil un momento.<br>
+    Cuando levanté la vista ya era mañana.
+  </div>
+
+  <div class="card">
+    Me desperté de madrugada con una idea brillante.<br>
+    No la apunté.<br>
+    Confío demasiado en mi yo del futuro.
+  </div>
+
+  <div class="card">
+    Dormimos en la misma cama.<br>
+    Cada uno con sus propios pensamientos.
   </div>
 </section>
 
@@ -131,46 +177,45 @@ footer {
   <h2>Pensamientos que solo aparecen tumbado</h2>
 
   <blockquote>
-    Mañana empiezo todo.<br>
-    Pero mañana de verdad.
+    No es que mañana empiece.<br>
+    Es que ahora no puedo.
   </blockquote>
 
   <blockquote>
-    Esto no se lo diría a nadie despierto.
+    Esto no es tristeza.<br>
+    Es cansancio acumulado.
   </blockquote>
 
   <blockquote>
-    Solo un minuto más.
+    Si cierro los ojos un minuto más, quizá todo encaje.
   </blockquote>
 </section>
 
-<section class="image-block">
-  <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1400&q=80" alt="Luz nocturna">
-</section>
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" alt="Cama con luz suave">
+</div>
 
 <section>
   <h2>El móvil en la cama</h2>
 
   <div class="card">
-    Tiempo previsto: cinco minutos.<br>
-    Tiempo real: indefinido.<br>
-    Consecuencia: ninguna decisión tomada.
+    No lo usas para distraerte.<br>
+    Lo usas para no quedarte solo con tus pensamientos.
   </div>
 </section>
 
 <section>
-  <h2>Archivo clínico</h2>
+  <h2>Archivo</h2>
 
   <div class="card">
-    La cama no es descanso.  
-    Es un escenario mental donde se ensayan conversaciones,  
-    se revisan errores y se toman decisiones que nunca se ejecutan.
+    La cama no es descanso.<br>
+    Es un lugar donde por fin no finges que todo va bien.
   </div>
 </section>
 
 <footer>
   posiciónhorizontal.com<br>
-  Observatorio no oficial de la mente cansada
+  Para leer con la luz apagada
 </footer>
 
 </body>
