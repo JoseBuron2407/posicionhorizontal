@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>posición horizontal</title>
+<title>Posición horizontal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -31,26 +31,6 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 
-header {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-header h1 {
-  font-weight: 300;
-  font-size: 2.4rem;
-  color: #fff;
-  max-width: 720px;
-}
-
 .toggle {
   position: fixed;
   top: 1rem;
@@ -65,13 +45,58 @@ header h1 {
   z-index: 10;
 }
 
+header {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+header .box {
+  background: rgba(255,255,255,0.9);
+  padding: 2.5rem 2rem;
+  border-radius: 22px;
+  max-width: 720px;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: #111;
+}
+
+header h2 {
+  margin: 0.6rem 0 1.2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+header .crown {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+header p {
+  margin: 0;
+  font-weight: 300;
+}
+
 section {
   max-width: 900px;
   margin: 4.5rem auto;
   padding: 0 1.5rem;
 }
 
-h2 {
+h3 {
   font-weight: 500;
   color: var(--accent);
   margin-bottom: 1.8rem;
@@ -116,113 +141,86 @@ footer {
 </button>
 
 <header>
-  <h1>
-    Diseñada para leerse en el móvil,<br>
-    en la cama,<br>
-    con el pulgar cansado<br>
-    y el sueño haciendo amagos.
-  </h1>
+  <div class="box">
+    <h1>Posición horizontal</h1>
+    <h2><span class="crown">👑</span>La Princesa Maripi</h2>
+    <p>
+      Diseñada para leerse en el móvil, en la cama,<br>
+      cuando dormir todavía no es una opción.
+    </p>
+  </div>
 </header>
 
 <section>
-  <h2>Estados horizontales</h2>
+  <h3>Anécdotas (dicen que reales)</h3>
 
   <div class="card">
-    <strong>El que solo iba a descansar</strong><br>
-    Te tumbas con buenas intenciones.<br>
-    La mente interpreta que es el momento ideal para repasar toda tu vida.
+    “Entré para leer dos textos.<br>
+    Ahora son las dos menos cuarto y sigo aquí.<br>
+    No sé si dormir o seguir bajando.”
   </div>
 
   <div class="card">
-    <strong>El que mira el techo</strong><br>
-    No piensa en nada concreto.<br>
-    Precisamente ese es el problema.
+    “Me recuerda demasiado a mí.<br>
+    Eso me ha hecho gracia y un poco de rabia.”
   </div>
 
   <div class="card">
-    <strong>El que cae sin darse cuenta</strong><br>
-    Estabas leyendo esto.<br>
-    No recuerdas la última frase.
+    “La leo siempre antes de apagar la luz.<br>
+    No me ayuda a dormir, pero me acompaña.”
   </div>
 </section>
 
 <div class="image">
-  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" alt="Cama con luz suave">
+  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Luz tenue en la habitación">
 </div>
 
 <section>
-  <h2>Anécdotas para distraerse</h2>
+  <h3>Cosas curiosas que pasan leyendo esto</h3>
 
   <div class="card">
-    Me acosté temprano para madrugar.<br>
-    A la una estaba leyendo opiniones de hoteles en ciudades donde no pienso ir.
+    Empiezas sonriendo.<br>
+    Luego te reconoces.<br>
+    Al final miras la hora.
   </div>
 
   <div class="card">
-    Solo iba a mirar el móvil un momento.<br>
-    Cuando lo dejé, el cargador ya estaba más cansado que yo.
+    Dices “una más”.<br>
+    Esa nunca es la última.
   </div>
 
   <div class="card">
-    Puse la tele para dormirme.<br>
-    Ahora sé más cosas, pero sigo despierto.
-  </div>
-
-  <div class="card">
-    Me dormí sujetando el móvil.<br>
-    Me desperté buscándolo debajo de la almohada.<br>
-    Estaba en mi mano.
+    Te tumbas mejor.<br>
+    Como si la postura ayudara a leer.
   </div>
 </section>
 
 <div class="image">
-  <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80" alt="Habitación de noche">
+  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" alt="Cama tranquila">
 </div>
 
 <section>
-  <h2>Pensamientos que aparecen tumbado</h2>
+  <h3>Más pensamientos horizontales</h3>
+
+  <blockquote>
+    Igual no tengo sueño.<br>
+    Igual tengo curiosidad.
+  </blockquote>
 
   <blockquote>
     Mañana empiezo todo.<br>
-    Pero mañana bien.
+    Pero ahora no me levanto.
   </blockquote>
 
   <blockquote>
-    Si no miro el móvil, pienso.<br>
-    Si pienso, no duermo.
+    Si dejo el móvil, pienso.<br>
+    Si pienso, sigo leyendo.
   </blockquote>
-
-  <blockquote>
-    Igual no tengo insomnio.<br>
-    Igual tengo demasiadas pestañas abiertas.
-  </blockquote>
-</section>
-
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Luz tenue">
-</div>
-
-<section>
-  <h2>El móvil en la cama</h2>
-
-  <div class="card">
-    No es una distracción.<br>
-    Es una negociación con el sueño.
-  </div>
-</section>
-
-<section>
-  <h2>Archivo</h2>
-
-  <div class="card">
-    Esta web no quiere ayudarte a dormir.<br>
-    Quiere acompañarte mientras no lo consigues.
-  </div>
 </section>
 
 <footer>
   posiciónhorizontal.com<br>
-  Hecha para leer tumbado, sin prisa y sin propósito
+  Pensada para leer tumbado. Escrita para no tener prisa.
 </footer>
 
 </body>
