@@ -9,10 +9,10 @@
 
 <style>
 :root {
-  --bg: #f2f4f7;
+  --bg: #f3f4f6;
   --text: #1f2933;
   --card: #ffffff;
-  --accent: #4f6d8c;
+  --accent: #5a7694;
 }
 
 body.night {
@@ -28,29 +28,13 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.75;
-  transition: background 0.4s, color 0.4s;
-}
-
-.toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--card);
-  color: var(--text);
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 24px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  z-index: 10;
+  transition: background 0.5s, color 0.5s;
 }
 
 header {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,35 +43,27 @@ header {
 }
 
 header .box {
-  background: rgba(255,255,255,0.9);
-  padding: 2.5rem 2rem;
-  border-radius: 22px;
+  background: rgba(255,255,255,0.92);
+  padding: 2.5rem;
+  border-radius: 24px;
   max-width: 720px;
+}
+
+body.night header .box {
+  background: rgba(15,20,30,0.9);
 }
 
 header h1 {
   margin: 0;
-  font-weight: 600;
   font-size: 2.8rem;
-  color: #111;
+  font-weight: 600;
 }
 
 header h2 {
   margin: 0.6rem 0 1.2rem;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #555;
-}
-
-header .crown {
-  font-size: 1.6rem;
-  vertical-align: middle;
-  margin-right: 0.3rem;
-}
-
-header p {
-  margin: 0;
-  font-weight: 300;
+  opacity: 0.85;
 }
 
 section {
@@ -99,15 +75,22 @@ section {
 h3 {
   font-weight: 500;
   color: var(--accent);
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .card {
   background: var(--card);
   padding: 2rem;
-  border-radius: 18px;
+  border-radius: 20px;
   margin-bottom: 2rem;
   box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+}
+
+.maripi {
+  font-style: italic;
+  opacity: 0.9;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
 }
 
 .image {
@@ -117,12 +100,6 @@ h3 {
 .image img {
   width: 100%;
   border-radius: 22px;
-}
-
-blockquote {
-  margin: 0 0 1.4rem;
-  font-style: italic;
-  opacity: 0.85;
 }
 
 footer {
@@ -136,92 +113,105 @@ footer {
 
 <body>
 
-<button class="toggle" onclick="document.body.classList.toggle('night')">
-  Modo noche
-</button>
-
-<header>
+<header id="hero">
   <div class="box">
     <h1>Posición horizontal</h1>
-    <h2><span class="crown">👑</span>La Princesa Maripi</h2>
-    <p>
-      Diseñada para leerse en el móvil, en la cama,<br>
-      cuando dormir todavía no es una opción.
-    </p>
+    <h2>👑 La Princesa Maripí</h2>
+    <p id="heroText"></p>
   </div>
 </header>
 
 <section>
-  <h3>Anécdotas (dicen que reales)</h3>
+  <h3>La Princesa Maripí dice</h3>
 
-  <div class="card">
-    “Entré para leer dos textos.<br>
-    Ahora son las dos menos cuarto y sigo aquí.<br>
-    No sé si dormir o seguir bajando.”
+  <div class="card maripi">
+    “No era sueño lo que tenías.  
+    Era cansancio de todo lo demás.”
   </div>
 
-  <div class="card">
-    “Me recuerda demasiado a mí.<br>
-    Eso me ha hecho gracia y un poco de rabia.”
+  <div class="card maripi">
+    “Tú no te tumbas para dormir.  
+    Te tumbas para dejar de sostener el día.”
   </div>
 
-  <div class="card">
-    “La leo siempre antes de apagar la luz.<br>
-    No me ayuda a dormir, pero me acompaña.”
+  <div class="card maripi">
+    “Si sigues leyendo es porque aquí no te piden nada.”
   </div>
 </section>
 
 <div class="image">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80" alt="Luz tenue en la habitación">
+  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80">
 </div>
 
 <section>
-  <h3>Cosas curiosas que pasan leyendo esto</h3>
+  <h3>Comentarios encontrados</h3>
 
   <div class="card">
-    Empiezas sonriendo.<br>
-    Luego te reconoces.<br>
-    Al final miras la hora.
+    “Entré por curiosidad.  
+    Me quedé porque nadie me hablaba alto.”
   </div>
 
   <div class="card">
-    Dices “una más”.<br>
-    Esa nunca es la última.
+    “Esto no me duerme.  
+    Me acompaña.”
   </div>
 
   <div class="card">
-    Te tumbas mejor.<br>
-    Como si la postura ayudara a leer.
+    “La leo siempre en silencio.  
+    Como si alguien pudiera despertarse.”
+  </div>
+
+  <div class="card">
+    “No sé quién es Maripí.  
+    Pero sabe cosas.”
   </div>
 </section>
 
 <div class="image">
-  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" alt="Cama tranquila">
+  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80">
 </div>
 
 <section>
-  <h3>Más pensamientos horizontales</h3>
+  <h3>Pensamientos en horizontal</h3>
 
-  <blockquote>
-    Igual no tengo sueño.<br>
-    Igual tengo curiosidad.
-  </blockquote>
+  <div class="card">
+    Mañana será otra postura.  
+    Ahora esta es suficiente.
+  </div>
 
-  <blockquote>
-    Mañana empiezo todo.<br>
-    Pero ahora no me levanto.
-  </blockquote>
-
-  <blockquote>
-    Si dejo el móvil, pienso.<br>
-    Si pienso, sigo leyendo.
-  </blockquote>
+  <div class="card">
+    Si apago el móvil, pienso.  
+    Si pienso, vuelvo.
+  </div>
 </section>
 
 <footer>
-  posiciónhorizontal.com<br>
-  Pensada para leer tumbado. Escrita para no tener prisa.
+  posiciónhorizontal.com  
+  Hecha para leer despacio. Dedicada a quien la inspira.
 </footer>
+
+<script>
+const hour = new Date().getHours();
+const hero = document.getElementById("hero");
+const text = document.getElementById("heroText");
+
+if (hour >= 6 && hour < 12) {
+  hero.style.backgroundImage =
+    "linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80')";
+  text.textContent = "Todavía no te has levantado del todo.";
+}
+else if (hour >= 12 && hour < 20) {
+  hero.style.backgroundImage =
+    "linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80')";
+  text.textContent = "Estás cansado antes de tiempo.";
+}
+else {
+  document.body.classList.add("night");
+  hero.style.backgroundImage =
+    "linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80')";
+  text.textContent = "Ahora sí. Nadie espera nada de ti.";
+}
+</script>
 
 </body>
 </html>
