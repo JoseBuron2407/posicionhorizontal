@@ -13,19 +13,26 @@
   --text:#e6e8eb;
   --card:#151b23;
   --accent:#9bb7d4;
+  --size:1rem;
+}
+body.manta{
+  --size:1.15rem;
+  --bg:#05080c;
 }
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.75;
+  font-size:var(--size);
+  line-height:1.8;
+  transition:.4s;
 }
 header{
   min-height:100vh;
   background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
+    url("https://images.unsplash.com/photo-1500534314209-a26db0f5b8fd?auto=format&fit=crop&w=1600&q=80")
     center/cover no-repeat;
   display:flex;
   align-items:center;
@@ -34,21 +41,13 @@ header{
   padding:2rem;
 }
 header .box{
-  background:rgba(15,20,30,.85);
-  padding:2.5rem;
+  background:rgba(10,15,25,.88);
+  padding:2.6rem;
   border-radius:26px;
   max-width:760px;
 }
-h1{
-  margin:0;
-  font-size:2.8rem;
-  font-weight:600;
-}
-h2{
-  margin:0.6rem 0 1.4rem;
-  font-weight:400;
-  opacity:.85;
-}
+h1{margin:0;font-size:2.8rem;font-weight:600}
+h2{margin:.6rem 0 1.4rem;font-weight:400;opacity:.85}
 section{
   max-width:900px;
   margin:4.5rem auto;
@@ -66,9 +65,7 @@ h3{
   margin-bottom:2rem;
   box-shadow:0 18px 40px rgba(0,0,0,.25);
 }
-.image{
-  margin:4rem 0;
-}
+.image{margin:4rem 0}
 .image img{
   width:100%;
   border-radius:26px;
@@ -77,7 +74,6 @@ h3{
   font-style:italic;
   border-left:3px solid var(--accent);
   padding-left:1rem;
-  opacity:.9;
 }
 footer{
   text-align:center;
@@ -85,36 +81,29 @@ footer{
   font-size:.85rem;
   opacity:.65;
 }
+button{
+  border:none;
+  background:var(--accent);
+  color:#05080c;
+  padding:.7rem 1.6rem;
+  border-radius:20px;
+  font-size:.85rem;
+  cursor:pointer;
+}
 
-/* Muñequita */
+/* Muñequita Maripi */
 #maripi-doll{
   position:fixed;
-  bottom:30px;
-  left:20px;
-  font-size:2rem;
-  animation:drift 10s ease-in-out infinite;
+  bottom:28px;
+  left:18px;
+  font-size:1.9rem;
+  animation:drift 9s ease-in-out infinite;
   opacity:.75;
 }
 @keyframes drift{
   0%{transform:translate(0,0)}
-  50%{transform:translate(18px,-12px)}
+  50%{transform:translate(22px,-14px)}
   100%{transform:translate(0,0)}
-}
-
-/* Texto oculto */
-#secreto{
-  display:none;
-  margin-top:3rem;
-  opacity:.7;
-  font-style:italic;
-}
-button{
-  border:none;
-  background:var(--accent);
-  color:#0b0f14;
-  padding:.7rem 1.5rem;
-  border-radius:20px;
-  font-size:.85rem;
 }
 </style>
 </head>
@@ -125,89 +114,114 @@ button{
   <div class="box">
     <h1>Posición horizontal</h1>
     <h2>Buenas noches, Maripi</h2>
-    <p>
-      Aquí no hay prisa.<br>
-      Fuera hace frío.<br>
-      Dentro estás a salvo.
-    </p>
+    <p id="saludo"></p>
   </div>
 </header>
 
 <section>
-  <h3>Escena habitual</h3>
+  <h3>Escena</h3>
   <div class="card">
-    Estás en la cama.<br>
-    Hay más de una manta.<br>
-    El aire está frío y no apetece sacar los pies.<br>
-    El móvil ilumina lo justo.<br>
-    No buscas nada concreto.
+    La habitación está fría.<br>
+    Muebles de madera oscura.<br>
+    Un cabecero firme.<br>
+    Tres o cuatro mantas encima.<br>
+    La persiana cerrada.<br>
+    El móvil ilumina lo justo.
   </div>
 </section>
 
 <div class="image">
-  <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5b8fd?auto=format&fit=crop&w=1600&q=80" alt="Luna nocturna">
+  <img src="https://images.unsplash.com/photo-1600431521340-491eca880813?auto=format&fit=crop&w=1600&q=80"
+  alt="Habitación con cama y mantas">
+</div>
+
+<div class="image">
+  <img id="luna" alt="Luna nocturna">
 </div>
 
 <section>
   <h3>La Princesa Maripi dice</h3>
-
-  <div class="card maripi" id="fraseMaripi"></div>
+  <div class="card maripi" id="frase"></div>
   <button onclick="otra()">Otra frase</button>
 </section>
-
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1600&q=80" alt="Persona en la cama con el móvil">
-</div>
 
 <section>
   <h3>Leído a las 2:17</h3>
   <div class="card">
     Afuera todo duerme.<br>
     Aquí no pasa nada.<br>
-    Y eso es suficiente.
+    Y eso basta.
   </div>
 </section>
 
 <section>
   <h3>Comentarios encontrados</h3>
-  <div class="card">“Hace frío, pero aquí no.”</div>
-  <div class="card">“No me dormí, pero descansé.”</div>
-  <div class="card">“La leí tapado hasta la nariz.”</div>
+  <div class="card">“Entré con frío. Aquí se me pasó.”</div>
+  <div class="card">“Leí tapado hasta la nariz.”</div>
+  <div class="card">“No dormí. Descansé.”</div>
 </section>
 
 <section>
-  <button onclick="mostrar()">Algo solo para Maripi</button>
-  <div id="secreto">
-    Esta página existe porque tú existes.<br>
-    Porque hay noches largas.<br>
-    Y porque a veces basta con estar.
-  </div>
+  <button onclick="document.body.classList.toggle('manta')">
+    Modo manta
+  </button>
 </section>
 
 <div id="maripi-doll">🧸</div>
 
 <footer>
 posiciónhorizontal.com<br>
-Pensada para noches frías. Escrita para Maripi.
+Se entra. Se queda uno un rato. Se sale más despacio.
 </footer>
 
 <script>
-const frases=[
-  "No te arropes más. Ya es suficiente.",
-  "Si sigues aquí es porque nadie te pide nada.",
-  "El frío se queda fuera. Tú no.",
-  "No todo lo que pesa quiere respuesta.",
-  "La noche también sirve para quedarse."
+/* Saludo */
+const h=new Date().getHours();
+const saludo=document.getElementById("saludo");
+saludo.textContent =
+(h>=22||h<6)
+?"Fuera hace frío. Aquí no tienes que moverte."
+:"Todavía no es hora de levantarse del todo.";
+
+/* Estación (frío) */
+const mes=new Date().getMonth();
+const haceFrio = mes<3 || mes>9;
+
+/* Frases */
+let frasesBase=[
+"No te arropes más. Ya es suficiente.",
+"Si sigues aquí es porque nadie te exige nada.",
+"La noche también sirve para quedarse."
 ];
+let frasesFrio=[
+"El frío se queda fuera. Tú no.",
+"Las mantas pesan, pero ayudan."
+];
+let frases = haceFrio ? frasesBase.concat(frasesFrio) : frasesBase;
+
+/* Frases que solo se leen una vez */
+let usadas = JSON.parse(localStorage.getItem("maripiUsadas")||"[]");
+frases = frases.filter(f=>!usadas.includes(f));
+
 function otra(){
+  if(frases.length===0) return;
   const i=Math.floor(Math.random()*frases.length);
-  document.getElementById("fraseMaripi").textContent=frases[i];
+  const f=frases.splice(i,1)[0];
+  usadas.push(f);
+  localStorage.setItem("maripiUsadas",JSON.stringify(usadas));
+  document.getElementById("frase").textContent=f;
 }
 otra();
 
-function mostrar(){
-  document.getElementById("secreto").style.display="block";
-}
+/* Fase lunar (aproximada) */
+const fases=[
+"https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1600&q=80",
+"https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80",
+"https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1600&q=80",
+"https://images.unsplash.com/photo-1470115636492-6d2b56f9146b?auto=format&fit=crop&w=1600&q=80"
+];
+const dia=new Date().getDate();
+document.getElementById("luna").src = fases[dia%fases.length];
 </script>
 
 </body>
