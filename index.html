@@ -9,104 +9,97 @@
 
 <style>
 :root {
-  --bg: #f3f4f6;
-  --text: #1f2933;
-  --card: #ffffff;
-  --accent: #5a7694;
+  --bg:#f3f4f6;
+  --text:#1f2933;
+  --card:#ffffff;
+  --accent:#5a7694;
 }
-
 body.night {
-  --bg: #0b0f14;
-  --text: #e5e7eb;
-  --card: #151b23;
-  --accent: #9bb7d4;
+  --bg:#0b0f14;
+  --text:#e5e7eb;
+  --card:#151b23;
+  --accent:#9bb7d4;
+}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  transition:0.5s;
+}
+header{
+  min-height:100vh;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+}
+header .box{
+  background:rgba(255,255,255,0.92);
+  padding:2.5rem;
+  border-radius:24px;
+  max-width:720px;
+}
+body.night header .box{
+  background:rgba(15,20,30,0.9);
+}
+h1{margin:0;font-size:2.8rem;font-weight:600}
+h2{margin:0.6rem 0 1.2rem;font-weight:400;opacity:.85}
+section{
+  max-width:900px;
+  margin:4.5rem auto;
+  padding:0 1.5rem;
+}
+h3{color:var(--accent);font-weight:500;margin-bottom:2rem}
+.card{
+  background:var(--card);
+  padding:2rem;
+  border-radius:20px;
+  margin-bottom:2rem;
+  box-shadow:0 14px 35px rgba(0,0,0,0.06);
+}
+.maripi{font-style:italic;border-left:3px solid var(--accent);padding-left:1rem}
+button{
+  border:none;
+  padding:0.7rem 1.4rem;
+  border-radius:20px;
+  background:var(--accent);
+  color:white;
+  font-size:0.85rem;
+  cursor:pointer;
+}
+footer{
+  text-align:center;
+  padding:4rem 1.5rem;
+  font-size:0.85rem;
+  opacity:.7;
 }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.75;
-  transition: background 0.5s, color 0.5s;
+/* Muñequita Maripí */
+#maripi-float{
+  position:fixed;
+  bottom:40px;
+  right:30px;
+  font-size:2.2rem;
+  animation:float 6s ease-in-out infinite;
+  opacity:0.8;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+  100%{transform:translateY(0)}
 }
 
-header {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-header .box {
-  background: rgba(255,255,255,0.92);
-  padding: 2.5rem;
-  border-radius: 24px;
-  max-width: 720px;
-}
-
-body.night header .box {
-  background: rgba(15,20,30,0.9);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.8rem;
-  font-weight: 600;
-}
-
-header h2 {
-  margin: 0.6rem 0 1.2rem;
-  font-weight: 400;
-  font-size: 1.2rem;
-  opacity: 0.85;
-}
-
-section {
-  max-width: 900px;
-  margin: 4.5rem auto;
-  padding: 0 1.5rem;
-}
-
-h3 {
-  font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 2rem;
-}
-
-.card {
-  background: var(--card);
-  padding: 2rem;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
-}
-
-.maripi {
-  font-style: italic;
-  opacity: 0.9;
-  border-left: 3px solid var(--accent);
-  padding-left: 1rem;
-}
-
-.image {
-  margin: 4rem 0;
-}
-
-.image img {
-  width: 100%;
-  border-radius: 22px;
-}
-
-footer {
-  text-align: center;
-  padding: 4rem 1.5rem;
-  font-size: 0.85rem;
-  opacity: 0.7;
+/* Texto oculto */
+#hidden{
+  display:none;
+  opacity:0.7;
+  margin-top:3rem;
+  font-style:italic;
 }
 </style>
 </head>
@@ -122,94 +115,85 @@ footer {
 </header>
 
 <section>
-  <h3>La Princesa Maripí dice</h3>
-
-  <div class="card maripi">
-    “No era sueño lo que tenías.  
-    Era cansancio de todo lo demás.”
-  </div>
-
-  <div class="card maripi">
-    “Tú no te tumbas para dormir.  
-    Te tumbas para dejar de sostener el día.”
-  </div>
-
-  <div class="card maripi">
-    “Si sigues leyendo es porque aquí no te piden nada.”
-  </div>
+<h3>Ritual nocturno</h3>
+<div class="card" id="ritual"></div>
 </section>
-
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80">
-</div>
 
 <section>
-  <h3>Comentarios encontrados</h3>
-
-  <div class="card">
-    “Entré por curiosidad.  
-    Me quedé porque nadie me hablaba alto.”
-  </div>
-
-  <div class="card">
-    “Esto no me duerme.  
-    Me acompaña.”
-  </div>
-
-  <div class="card">
-    “La leo siempre en silencio.  
-    Como si alguien pudiera despertarse.”
-  </div>
-
-  <div class="card">
-    “No sé quién es Maripí.  
-    Pero sabe cosas.”
-  </div>
+<h3>La Princesa Maripí dice</h3>
+<div class="card maripi" id="maripiQuote"></div>
+<button onclick="otraMaripi()">Otra frase de Maripí</button>
 </section>
-
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80">
-</div>
 
 <section>
-  <h3>Pensamientos en horizontal</h3>
-
-  <div class="card">
-    Mañana será otra postura.  
-    Ahora esta es suficiente.
-  </div>
-
-  <div class="card">
-    Si apago el móvil, pienso.  
-    Si pienso, vuelvo.
-  </div>
+<h3>Leído a las 2:17</h3>
+<div class="card">
+No sé qué buscaba.<br>
+Pero a esa hora esto fue suficiente.
+</div>
 </section>
+
+<section>
+<h3>Comentarios encontrados</h3>
+<div class="card">“Aquí no pasa nada. Y eso es lo que necesitaba.”</div>
+<div class="card">“Leí una frase y me quedé.”</div>
+<div class="card">“No sé quién hizo esto. Gracias.”</div>
+</section>
+
+<section>
+<button onclick="mostrar()">Algo que no se ve</button>
+<div id="hidden">
+Esto no es una web.<br>
+Es una manera de decirte que aquí siempre puedes tumbarte.<br>
+Que no tienes que sostener nada.<br>
+Que si el día pesa, yo estoy.
+</div>
+</section>
+
+<div id="maripi-float">👑</div>
 
 <footer>
-  posiciónhorizontal.com  
-  Hecha para leer despacio. Dedicada a quien la inspira.
+posiciónhorizontal.com<br>
+Hecha despacio. Pensada para ella.
 </footer>
 
 <script>
-const hour = new Date().getHours();
-const hero = document.getElementById("hero");
-const text = document.getElementById("heroText");
+const hero=document.getElementById("hero");
+const heroText=document.getElementById("heroText");
+const hour=new Date().getHours();
 
-if (hour >= 6 && hour < 12) {
-  hero.style.backgroundImage =
-    "linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80')";
-  text.textContent = "Todavía no te has levantado del todo.";
-}
-else if (hour >= 12 && hour < 20) {
-  hero.style.backgroundImage =
-    "linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80')";
-  text.textContent = "Estás cansado antes de tiempo.";
-}
-else {
+if(hour>=22||hour<6){
   document.body.classList.add("night");
-  hero.style.backgroundImage =
-    "linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80')";
-  text.textContent = "Ahora sí. Nadie espera nada de ti.";
+  hero.style.backgroundImage="linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80')";
+  heroText.textContent="Ahora sí. Nadie espera nada.";
+}else{
+  hero.style.backgroundImage="linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80')";
+  heroText.textContent="Todavía no es hora de levantarse del todo.";
+}
+
+const maripi=[
+"No te tumbes para huir. Túmbate para quedarte.",
+"Si sigues aquí es porque nadie te exige nada.",
+"El día se sostiene mejor desde abajo.",
+"No todo lo que pesa quiere respuesta."
+];
+
+function otraMaripi(){
+  const i=Math.floor(Math.random()*maripi.length);
+  document.getElementById("maripiQuote").textContent=maripi[i];
+}
+otraMaripi();
+
+const rituales=[
+"Respira. Baja los hombros. Lee.",
+"Nadie te habla ahora. Sigue.",
+"Mañana es otra postura."
+];
+document.getElementById("ritual").innerHTML=
+rituales.sort(()=>0.5-Math.random()).slice(0,3).join("<br>");
+
+function mostrar(){
+  document.getElementById("hidden").style.display="block";
 }
 </script>
 
