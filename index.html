@@ -8,15 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#f3f4f6;
-  --text:#1f2933;
-  --card:#ffffff;
-  --accent:#5a7694;
-}
-body.night {
+:root{
   --bg:#0b0f14;
-  --text:#e5e7eb;
+  --text:#e6e8eb;
   --card:#151b23;
   --accent:#9bb7d4;
 }
@@ -26,12 +20,13 @@ body{
   background:var(--bg);
   color:var(--text);
   line-height:1.75;
-  transition:0.5s;
 }
 header{
   min-height:100vh;
-  background-size:cover;
-  background-position:center;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -39,161 +34,179 @@ header{
   padding:2rem;
 }
 header .box{
-  background:rgba(255,255,255,0.92);
+  background:rgba(15,20,30,.85);
   padding:2.5rem;
-  border-radius:24px;
-  max-width:720px;
+  border-radius:26px;
+  max-width:760px;
 }
-body.night header .box{
-  background:rgba(15,20,30,0.9);
+h1{
+  margin:0;
+  font-size:2.8rem;
+  font-weight:600;
 }
-h1{margin:0;font-size:2.8rem;font-weight:600}
-h2{margin:0.6rem 0 1.2rem;font-weight:400;opacity:.85}
+h2{
+  margin:0.6rem 0 1.4rem;
+  font-weight:400;
+  opacity:.85;
+}
 section{
   max-width:900px;
   margin:4.5rem auto;
   padding:0 1.5rem;
 }
-h3{color:var(--accent);font-weight:500;margin-bottom:2rem}
+h3{
+  color:var(--accent);
+  font-weight:500;
+  margin-bottom:2rem;
+}
 .card{
   background:var(--card);
   padding:2rem;
-  border-radius:20px;
+  border-radius:22px;
   margin-bottom:2rem;
-  box-shadow:0 14px 35px rgba(0,0,0,0.06);
+  box-shadow:0 18px 40px rgba(0,0,0,.25);
 }
-.maripi{font-style:italic;border-left:3px solid var(--accent);padding-left:1rem}
-button{
-  border:none;
-  padding:0.7rem 1.4rem;
-  border-radius:20px;
-  background:var(--accent);
-  color:white;
-  font-size:0.85rem;
-  cursor:pointer;
+.image{
+  margin:4rem 0;
+}
+.image img{
+  width:100%;
+  border-radius:26px;
+}
+.maripi{
+  font-style:italic;
+  border-left:3px solid var(--accent);
+  padding-left:1rem;
+  opacity:.9;
 }
 footer{
   text-align:center;
   padding:4rem 1.5rem;
-  font-size:0.85rem;
-  opacity:.7;
+  font-size:.85rem;
+  opacity:.65;
 }
 
-/* Muñequita Maripí */
-#maripi-float{
+/* Muñequita */
+#maripi-doll{
   position:fixed;
-  bottom:40px;
-  right:30px;
-  font-size:2.2rem;
-  animation:float 6s ease-in-out infinite;
-  opacity:0.8;
+  bottom:30px;
+  left:20px;
+  font-size:2rem;
+  animation:drift 10s ease-in-out infinite;
+  opacity:.75;
 }
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-18px)}
-  100%{transform:translateY(0)}
+@keyframes drift{
+  0%{transform:translate(0,0)}
+  50%{transform:translate(18px,-12px)}
+  100%{transform:translate(0,0)}
 }
 
 /* Texto oculto */
-#hidden{
+#secreto{
   display:none;
-  opacity:0.7;
   margin-top:3rem;
+  opacity:.7;
   font-style:italic;
+}
+button{
+  border:none;
+  background:var(--accent);
+  color:#0b0f14;
+  padding:.7rem 1.5rem;
+  border-radius:20px;
+  font-size:.85rem;
 }
 </style>
 </head>
 
 <body>
 
-<header id="hero">
+<header>
   <div class="box">
     <h1>Posición horizontal</h1>
-    <h2>👑 La Princesa Maripí</h2>
-    <p id="heroText"></p>
+    <h2>Buenas noches, Maripi</h2>
+    <p>
+      Aquí no hay prisa.<br>
+      Fuera hace frío.<br>
+      Dentro estás a salvo.
+    </p>
   </div>
 </header>
 
 <section>
-<h3>Ritual nocturno</h3>
-<div class="card" id="ritual"></div>
+  <h3>Escena habitual</h3>
+  <div class="card">
+    Estás en la cama.<br>
+    Hay más de una manta.<br>
+    El aire está frío y no apetece sacar los pies.<br>
+    El móvil ilumina lo justo.<br>
+    No buscas nada concreto.
+  </div>
 </section>
 
-<section>
-<h3>La Princesa Maripí dice</h3>
-<div class="card maripi" id="maripiQuote"></div>
-<button onclick="otraMaripi()">Otra frase de Maripí</button>
-</section>
-
-<section>
-<h3>Leído a las 2:17</h3>
-<div class="card">
-No sé qué buscaba.<br>
-Pero a esa hora esto fue suficiente.
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5b8fd?auto=format&fit=crop&w=1600&q=80" alt="Luna nocturna">
 </div>
-</section>
 
 <section>
-<h3>Comentarios encontrados</h3>
-<div class="card">“Aquí no pasa nada. Y eso es lo que necesitaba.”</div>
-<div class="card">“Leí una frase y me quedé.”</div>
-<div class="card">“No sé quién hizo esto. Gracias.”</div>
+  <h3>La Princesa Maripi dice</h3>
+
+  <div class="card maripi" id="fraseMaripi"></div>
+  <button onclick="otra()">Otra frase</button>
 </section>
 
-<section>
-<button onclick="mostrar()">Algo que no se ve</button>
-<div id="hidden">
-Esto no es una web.<br>
-Es una manera de decirte que aquí siempre puedes tumbarte.<br>
-Que no tienes que sostener nada.<br>
-Que si el día pesa, yo estoy.
+<div class="image">
+  <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1600&q=80" alt="Persona en la cama con el móvil">
 </div>
+
+<section>
+  <h3>Leído a las 2:17</h3>
+  <div class="card">
+    Afuera todo duerme.<br>
+    Aquí no pasa nada.<br>
+    Y eso es suficiente.
+  </div>
 </section>
 
-<div id="maripi-float">👑</div>
+<section>
+  <h3>Comentarios encontrados</h3>
+  <div class="card">“Hace frío, pero aquí no.”</div>
+  <div class="card">“No me dormí, pero descansé.”</div>
+  <div class="card">“La leí tapado hasta la nariz.”</div>
+</section>
+
+<section>
+  <button onclick="mostrar()">Algo solo para Maripi</button>
+  <div id="secreto">
+    Esta página existe porque tú existes.<br>
+    Porque hay noches largas.<br>
+    Y porque a veces basta con estar.
+  </div>
+</section>
+
+<div id="maripi-doll">🧸</div>
 
 <footer>
 posiciónhorizontal.com<br>
-Hecha despacio. Pensada para ella.
+Pensada para noches frías. Escrita para Maripi.
 </footer>
 
 <script>
-const hero=document.getElementById("hero");
-const heroText=document.getElementById("heroText");
-const hour=new Date().getHours();
-
-if(hour>=22||hour<6){
-  document.body.classList.add("night");
-  hero.style.backgroundImage="linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80')";
-  heroText.textContent="Ahora sí. Nadie espera nada.";
-}else{
-  hero.style.backgroundImage="linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1505691723518-36a5ac3b2a66?auto=format&fit=crop&w=1600&q=80')";
-  heroText.textContent="Todavía no es hora de levantarse del todo.";
-}
-
-const maripi=[
-"No te tumbes para huir. Túmbate para quedarte.",
-"Si sigues aquí es porque nadie te exige nada.",
-"El día se sostiene mejor desde abajo.",
-"No todo lo que pesa quiere respuesta."
+const frases=[
+  "No te arropes más. Ya es suficiente.",
+  "Si sigues aquí es porque nadie te pide nada.",
+  "El frío se queda fuera. Tú no.",
+  "No todo lo que pesa quiere respuesta.",
+  "La noche también sirve para quedarse."
 ];
-
-function otraMaripi(){
-  const i=Math.floor(Math.random()*maripi.length);
-  document.getElementById("maripiQuote").textContent=maripi[i];
+function otra(){
+  const i=Math.floor(Math.random()*frases.length);
+  document.getElementById("fraseMaripi").textContent=frases[i];
 }
-otraMaripi();
-
-const rituales=[
-"Respira. Baja los hombros. Lee.",
-"Nadie te habla ahora. Sigue.",
-"Mañana es otra postura."
-];
-document.getElementById("ritual").innerHTML=
-rituales.sort(()=>0.5-Math.random()).slice(0,3).join("<br>");
+otra();
 
 function mostrar(){
-  document.getElementById("hidden").style.display="block";
+  document.getElementById("secreto").style.display="block";
 }
 </script>
 
